@@ -1,0 +1,4 @@
+defaults
+ie >= 9
+iOS >= 8
+Android >= 4

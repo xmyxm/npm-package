@@ -1,0 +1,55 @@
+@import "./reset.less";
+
+.lab-box {
+    background: #fff;
+
+    .opt-list, .btn-list {
+        padding: 15px;
+    }
+
+    .opt-item {
+        line-height: 58px;
+        padding-left: 15px;
+        margin-bottom: 15px;
+        border-radius: 6px;
+        background: rgb(244, 244, 245);
+    }
+
+    .btn-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-item {
+        width: 48%;
+        font-size: 16px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid #60c2cf;
+        background: rgba(96, 194, 207, .1);
+        color: #42bfd0;
+    }
+
+    .suspension {
+        position: fixed;
+        right: 20px;
+        bottom: 100px;
+    }
+
+    .top-icon {
+        background: url("./icon/top.svg") center no-repeat;
+    }
+
+    .bottom-icon {
+        background: url("./icon/bottom.svg") center no-repeat;
+    }
+
+    .top-icon, .bottom-icon {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        background-size: 32px 32px;
+    }
+}

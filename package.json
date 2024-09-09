@@ -1,0 +1,65 @@
+{
+    "name": "@dp/fish",
+    "version": "0.1.17",
+    "description": "打点数据自动化上报",
+    "module": "build/es/index.js",
+    "main": "build/lib/index.js",
+    "files": [
+        "/build",
+        "ax-report.js",
+        "package-lock.json",
+        "package.json",
+        "README.md"
+    ],
+    "scripts": {
+        "init": "npm i && cd example/ && npm i",
+        "start:demo": "cd example/ && node app.js",
+        "fish:build": "npm run clean && node docup.js && rollup -c",
+        "demo:build": "cd example/&& npm i && ./node_modules/.bin/webpack && cd ../ && rollup -c",
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "node docup.js && vuepress build docs",
+        "watch": "rollup -w -c",
+        "clean": "rm -rf build",
+        "lint": "eslint src --fix --ext .ts,.js ",
+        "postinstall": "node ax-report.js",
+        "postbuild": "node_modules/.bin/ax-info-cli reportReferBatch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@git.dianpingoa.com/yayajing/fish.git"
+    },
+    "keywords": [
+        "打点工具",
+        "埋点工具",
+        "打点数据自动化上报"
+    ],
+    "author": "chenxuanfeng",
+    "license": "ISC",
+    "dependencies": {
+        "intersection-observer": "^0.7.0",
+        "@dp/acinonyx-info": "latest"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.7",
+        "@dp/ax-publish-command": "^1.0.19",
+        "@nibfe/vuepress-theme-sky": "^1.0.10",
+        "@rollup/plugin-commonjs": "^11.0.2",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@typescript-eslint/eslint-plugin": "^2.22.0",
+        "@typescript-eslint/parser": "^2.22.0",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-markdown": "^1.0.2",
+        "execa": "^4.0.0",
+        "rollup": "^1.32.0",
+        "rollup-plugin-analyzer": "^3.2.2",
+        "rollup-plugin-buble": "^0.19.8",
+        "rollup-plugin-multi-input": "^1.1.1",
+        "rollup-plugin-typescript2": "^0.26.0",
+        "rollup-plugin-uglify": "^6.0.4",
+        "typescript": "^3.8.3",
+        "vuepress": "^1.4.0"
+    }
+}

@@ -1,0 +1,59 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+    &.bg{
+        background: #fff;
+    }
+
+    &.shadow{
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    }
+    &.bbt{
+        &:after{
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background: #e1e1e1;
+        }
+    }
+
+    .back, .next, .next-page {
+        height: 34px;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .back {
+        background: url(../../style/icon/back.png) left center no-repeat;
+        background-size: 24px 24px;
+    }
+
+    .next-page {
+        background: url(../../style/icon/forward.png) right center no-repeat;
+        background-size: 24px 24px;
+    }
+
+    .title {
+        flex: 1;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.headerbox {
+    height: 44px;
+}

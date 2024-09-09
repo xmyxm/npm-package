@@ -1,0 +1,50 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "example",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/page -d build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chenxuanfeng",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.1.4",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dashboard": "^3.0.7",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "@dp/fish": "^0.1.16",
+    "history": "^4.10.1",
+    "lz-string": "^1.4.4",
+    "open": "^6.4.0",
+    "pako": "^1.0.11",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.1.2",
+    "vconsole": "^3.3.2",
+    "whatwg-fetch": "^3.0.0"
+  }
+}
