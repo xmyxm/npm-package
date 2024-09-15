@@ -1,7 +1,7 @@
 {
-    "name": "@dp/fish",
+    "name": "@dp/npm-test",
     "version": "0.1.17",
-    "description": "打点数据自动化上报",
+    "description": "js sdk",
     "module": "build/es/index.js",
     "main": "build/lib/index.js",
     "files": [
@@ -14,7 +14,7 @@
     "scripts": {
         "init": "npm i && cd example/ && npm i",
         "start:demo": "cd example/ && node app.js",
-        "fish:build": "npm run clean && node docup.js && rollup -c",
+        "pro:build": "npm run clean && node docup.js && rollup -c",
         "demo:build": "cd example/&& npm i && ./node_modules/.bin/webpack && cd ../ && rollup -c",
         "watch": "rollup -w -c",
         "clean": "rm -rf build",
@@ -31,7 +31,7 @@
     ],
     "author": "cxf",
     "license": "ISC",
-    "dependencies": {
+    "devDependencies": {
         "@babel/core": "^7.25.2",
         "@dp/acinonyx-info": "latest",
         "@rollup/plugin-commonjs": "^26.0.1",
