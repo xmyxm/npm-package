@@ -2,6 +2,12 @@ import getTime from "./util/format-date";
 import printLog from "./util/print-log";
 const VERSION = "0.0.1";
 
+enum ConsoleType {
+  INFO = 'info',
+  WARN = 'warn',
+  ERROR = 'error'
+}
+
 class Log {
   name: string;
   version: string;
@@ -12,27 +18,33 @@ class Log {
   }
 
   info(text: string) {
-    this.writeText("info", text);
+    this.writeText(ConsoleType.INFO, text);
   }
 
   warn(text: string) {
-    this.writeText("warn", text);
+    this.writeText(ConsoleType.WARN, text);
   }
 
   error(text: string) {
-    this.writeText("error", text);
+    this.writeText(ConsoleType.ERROR, text);
   }
 
-  writeText(funName: string, text: string) {
-    printLog[funName](`${this.name}|${getTime()}: ${text}`);
+  writeText(funName: ConsoleType, text: string): void {
+    const fun: Function = printLog[funName]
+    fun(`${this.name}|${getTime()}: ${text}`);
   }
 
   // 定义一个静态方法，不需要实例化类即可调用
-  static getName() {
+  static getEnv(): string {
+    return 'pro'
+  }
+
+  // 定义一个静态方法，不需要实例化类即可调用
+  getName() {
     console.log(this.name);
   }
 
-  static getVersion() {
+  getVersion() {
     console.log(this.version);
   }
 }
