@@ -29,9 +29,7 @@
         "url": "ssh://git@git.dianpingoa.com/yayajing/fish.git"
     },
     "keywords": [
-        "打点工具",
-        "埋点工具",
-        "打点数据自动化上报"
+        "JS SDK"
     ],
     "author": "chenxuanfeng",
     "license": "ISC",
